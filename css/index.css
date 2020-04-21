@@ -6,8 +6,8 @@ body {
     height: 100%;
 }
 
-.continer {
-    width: 100px;
+.container {
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -245,18 +245,20 @@ nav {
     bottom: 6px;
 }
 
-.content{
-    width: 100%;
-    height: 100%;
-}
+
+
 /* 轮播图 */
 .slider {
     position: relative;
-    top: 148px;
-    height: 384px;
+    top: 160px;
     width: 100%;
-    margin: 0 auto;
+    height: 630px;
+    overflow: hidden;
+}
 
+.slider ul {
+
+    height: 524px;
 }
 
 .slider ul li {
@@ -265,8 +267,8 @@ nav {
 }
 
 .slider ul li img {
-    height: 100%;
-    width: 100%;
+    width: 1520px;
+    height: 593px;
 }
 
 .slider ul li:first-child {
@@ -309,30 +311,139 @@ nav {
 
 .slider ol {
     position: absolute;
-    width: 100%;
     height: 36px;
     left: 50%;
-    top: 335px;
+    bottom: -5px;
     transform: translate(-50%);
 }
 
 .slider ol li {
     float: left;
     color: #999;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
     height: 15px;
     padding: 5px 0;
     margin-left: 8px;
     cursor: pointer;
+
 }
 
 .slider ol li {
     display: inline-block;
 }
 
-
-
 .slider ol li.current {
     color: #000;
     text-decoration: overline;
+}
+
+/* 主体 */
+.content {
+    width: 100%;
+    height: 1000px;
+    margin-top: 190px;
+}
+
+/* 热卖单品 */
+.hot {
+    width: 100%;
+    height: 1066px;
+    overflow: hidden;
+}
+
+.hot-title {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hot-line {
+    position: absolute;
+    background-color: #b7b7b7;
+    height: 1px;
+    left: 1.5%;
+    width: 97%;
+}
+
+h1 {
+    position: absolute;
+    top: -15px;
+    left: 380px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+    padding: 0 40px;
+    font-size: 30px;
+    background-color: #fff;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+/* 选项 */
+.hot-items {
+    float: left;
+}
+
+.hot-item {
+    float: left;
+    width: 24%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hot-item:hover .hot-keyWords {
+    text-decoration: underline;
+}
+
+.hot-keyWords {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.hot-menu-arrow {
+    position: relative;
+    width: 97%;
+    height: 20px;
+    margin-top: 20px;
+    padding: 0 1.5%;
+}
+
+.hot-menu-arrow::before {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 1px;
+    top: 254px;
+    left: 1.5%;
+    background-color: #b7b7b7;
+}
+.hot-menu{
+    position: absolute;
+    width: 39px;
+    height: 21px;
+    background-image: url(../images/active.png);
+    top: 254px;
+    left: 100px;
+}
+.product-lists{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.product-lists ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 19px;
+    border-bottom: 1px dotted #b7b7b7;
+    margin: 20px auto 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.hot-pro-list{
+    float: left;
 }
