@@ -1,0 +1,338 @@
+head,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.continer {
+    width: 100px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    z-index: 666;
+}
+
+.header-continer {
+    width: 1406px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+header .logo {
+    float: left;
+    width: 163px;
+    height: 80px;
+}
+
+header .logo img {
+    width: 163px;
+    height: 21.58px;
+    margin-top: 29px;
+}
+
+header .header-right {
+    position: relative;
+    float: right;
+    margin-right: 37px;
+}
+
+header .header-enroll {
+    float: left;
+    height: 100%;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: auto;
+    line-height: 80px;
+    letter-spacing: 1px;
+}
+
+.header-enroll a {
+    color: #fff;
+    display: inline-block;
+}
+
+.header-enroll a:hover {
+    text-decoration: underline;
+}
+
+
+
+.iconMy {
+    width: 31px;
+    height: 31px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -96px -85px;
+    margin-left: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.iconMy:hover {
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -136px -65px;
+}
+
+.header-cart {
+    float: left;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    line-height: 80px;
+    letter-spacing: 1px;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.header-cart a {
+    color: #fff;
+}
+
+.header-cart a:hover {
+    text-decoration: underline;
+}
+
+.iconCart {
+    width: 31px;
+    height: 31px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -168px -97px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.header-message {
+    float: left;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.iconMess {
+    width: 31px;
+    height: 31px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -95px -54px;
+    cursor: pointer;
+}
+
+.iconMess:hover {
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -135px -32px;
+}
+
+.header-search {
+    float: left;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.iconSearch {
+    width: 31px;
+    height: 31px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -136px -161px;
+    cursor: pointer;
+}
+
+.iconSearch:hover {
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -135px 0px;
+}
+
+.header-help {
+    float: left;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.iconHelp {
+    width: 31px;
+    height: 31px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -168px -162px;
+    cursor: pointer;
+}
+
+.iconHelp:hover {
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -166px 0px;
+}
+
+
+/* 登录 */
+.login {
+    display: none;
+}
+
+/* 注册 */
+.register {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: #464646;
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+}
+
+.headerNav {
+    width: 670px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.headerNav li {
+    width: 134px;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    /* font-family: ; */
+}
+
+.headerNav li a {
+    display: block;
+    line-height: 28px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.headerNav li:nth-child(-n+3):hover a {
+    text-decoration: underline;
+}
+
+.headerNav li i {
+    border-color: white transparent transparent;
+    border-right: 6px solid transparent;
+    border-style: solid;
+    border-width: 6px;
+    position: absolute;
+    width: 0;
+    margin-left: -6px;
+    height: 0;
+    bottom: 6px;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+/* 轮播图 */
+.slider {
+    position: relative;
+    top: 148px;
+    height: 384px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.slider ul li {
+    position: absolute;
+    display: none;
+}
+
+.slider ul li img {
+    height: 100%;
+    width: 100%;
+}
+
+.slider ul li:first-child {
+    display: block;
+}
+
+.arrow {
+    display: none;
+}
+
+.arrow-left,
+.arrow-right {
+    font-family: "SimSun", "宋体";
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.slider ol {
+    position: absolute;
+    width: 100%;
+    height: 36px;
+    left: 50%;
+    top: 335px;
+    transform: translate(-50%);
+}
+
+.slider ol li {
+    float: left;
+    color: #999;
+    font-size: 15px;
+    height: 15px;
+    padding: 5px 0;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.slider ol li {
+    display: inline-block;
+}
+
+
+
+.slider ol li.current {
+    color: #000;
+    text-decoration: overline;
+}

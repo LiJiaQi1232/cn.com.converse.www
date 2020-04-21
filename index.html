@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/reset/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <!-- 版心 -->
+        <div class="header-continer">
+            <!-- 头部左边logo -->
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/header-footer-new3.png" alt=""></a>
+            </div>
+            <!-- 头部右边 -->
+            <div class="header-right">
+                <!-- 登录注册 -->
+                <div class="header-enroll">
+                    <a href="javascript:;">登录</a>
+                    <span>/</span>
+                    <a href="javascript:;">注册</a>
+                    <div class="iconMy"></div>
+                </div>
+                <!-- 购物车 -->
+                <div class="header-cart">
+                    <a href="">购物车</a>
+                    <div class="iconCart">0</div>
+                </div>
+                <!-- 信息 -->
+                <div class="header-message">
+                    <a href="">
+                        <div class="iconMess"></div>
+                    </a>
+
+                </div>
+                <!-- 搜索 -->
+                <div class="header-search">
+                    <a href="">
+                        <div class="iconSearch"></div>
+                    </a>
+
+                </div>
+                <!-- 帮助 -->
+                <div class="header-help">
+                    <a href="">
+                        <div class="iconHelp"></div>
+                    </a>
+
+                </div>
+            </div>
+            <!-- 当点击登录时 登录窗口 -->
+            <div class="login">
+                <div class="container">
+                    <!-- 左侧 -->
+                    <div class="login-left">
+                        <span>还未注册？</span>
+                        <a href="">注册用户 <i></i></a>
+                    </div>
+                    <!-- 分割线 -->
+                    <div class="login-line"></div>
+                    <!-- 右侧 -->
+                    <div class="login-right">
+                        <h2>已经成为会员？</h2>
+                        <form action="">
+                            <!-- 账号 手机号/邮箱 -->
+                            <input type="text" placeholder="邮箱/手机" id="username">
+                            <!-- 密码 -->
+                            <input type="password" placeholder="账户密码" id="password">
+                            <!-- 验证码 -->
+
+                            <!-- 单选 提示 -->
+                            <input type="checkbox" name="" id="ck1" checked>一旦登录，即表明您同意匡威更新的 <a href="javascript:;"
+                                class="agreement">隐私政策和使用规则</a>
+                            <!-- 登录按钮 -->
+                            <span>登录</span>
+                            <input type="checkbox" class="remember">记住登录名
+                            <a href="javascript:;" class="forget">忘记密码？</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 当点击注册按钮 注册窗口 -->
+            <div class="register">
+                <div class="register-content">
+                    <!-- 左侧 -->
+                    <div class="register-left">
+                        <!-- 手机号码 -->
+                        <span>手机号码
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="text" id="phone" placeholder="135xxxx3333">
+                        <span class="tip tip-phone"></span>
+                        <!-- 输入密码 -->
+                        <span>输入密码
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="password" id="register-password" placeholder="密码至少为6位字符">
+                        <span class="tip tip-password"></span>
+                        <!-- 验证码 -->
+                        <span>验证码
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="text" placeholder="请输入验证码" id="yanzheng">
+                        <input type="button" id="yzBtn">
+                        <span class="tip tip-yz"></span>
+                    </div>
+                    <!-- 注册  中间部分 -->
+                    <div class="register-center">
+                        <!-- 邮箱 -->
+                        <span>邮箱
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="text" id="email" placeholder="example@converse.com">
+                        <span class="tip tip-email"></span>
+                        <!-- 确认密码 -->
+                        <span>确认密码
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="password" id="rePassword" placeholder="请再次输入密码">
+                        <span class="tip tip-repass"></span>
+                        <!-- 短信验证码 -->
+                        <span>短信验证码
+                            <i style="color: red;">*</i>
+                        </span>
+                        <input type="text" id="message-yz">
+                        <span class="tip tip-messageYz"></span>
+                    </div>
+                    <!-- 注册 右边部分 -->
+                    <div class="register-right">
+                        <!-- 性别 -->
+                        <span>性别
+                            <i style="color: red;">*</i>
+                        </span>
+                        <div class="sex">
+                            <input type="radio" name="sex" id="boy" checked>男的
+                            <input type="radio" name="sex" id="girl">女的
+                        </div>
+                        <!--生日  -->
+                        <!-- 日期选择器插件 -->
+                        <span>生日（年-月-日）
+                            <i style="color: red;">*</i>
+                        </span>
+                        <div></div>
+                        <span class="tip tip-date"></span>
+                        <!-- 同意 -->
+                        <div class="agreement">
+                            <input type="checkbox" name="" id="ck1" checked>一旦登录，即表明您同意匡威更新的 <a href="javascript:;"
+                                class="agreement">隐私政策和使用规则</a>
+                        </div>
+                        <!-- 注册账户 -->
+                        <a href="javascript:;">注册账户</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 头部导航 -->
+    <nav>
+        <!-- 版心 -->
+        <div class="container">
+            <ul class="headerNav">
+                <li>
+                    <a href="">男的</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">女的</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">儿童</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">店铺分布</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">优惠专区</a>
+                    <i></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主体-->
+    <div class="content">
+        <!-- 轮播图 -->
+        <div class="slider">
+            <ul>
+                <li><a href="#"><img src="./upload/lunbo-07.gif" alt=""></a></li>
+                <li><a href="#"><img src="./upload/lunbo-01.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./upload/lunbo-02.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./upload/lunbo-03.gif" alt=""></a></li>
+                <li><a href="#"><img src="./upload/lunbo-04.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./upload/lunbo-05.gif" alt=""></a></li>
+
+            </ul>
+            <!--箭头-->
+            <div class="arrow">
+                <span class="arrow-left">&lt;</span>
+                <span class="arrow-right">&gt;</span>
+            </div>
+            <ol>
+                <li>GOLF le FLEUR*</li>
+                <li>JACK PURCELL</li>
+                <li>扎染幻境</li>
+                <li>ARCHIVE PRINTS</li>
+                <li>TEE</li>
+                <li>PRO LEATHER</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
