@@ -611,6 +611,9 @@ nav {
     border: 1px solid #b7b7b7;
     box-sizing: border-box;
 }
+.street-item:hover .mask{
+    display: block;
+}
 
 /* 遮罩层 */
 .mask {
@@ -701,6 +704,9 @@ nav {
     height: 334px;
     margin-right: 20px;
 }
+.choiceness-item:hover .mask{
+    display: block;
+}
 
 .choiceness-item:last-child {
     margin-right: 0;
@@ -713,6 +719,7 @@ nav {
     height: 242px;
     border: 1px solid #b7b7b7;
 }
+
 
 .choice-img img {
     width: 322px;
