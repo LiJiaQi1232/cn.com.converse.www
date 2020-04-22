@@ -18,27 +18,38 @@ header {
     height: 80px;
     background-color: #000;
     z-index: 666;
+    line-height: 80px;
 }
 
 .header-continer {
-    width: 1406px;
-    height: 80px;
+    padding-right: 84px;
+    padding-left: 68px;
+    height: 100%;
     margin: 0 auto;
 }
 
 header .logo {
     float: left;
     width: 163px;
-    height: 80px;
+    height: 21.58px;
+    margin: 5px 0 0 0px;
+}
+
+header .logo a {
+    display: inline-block;
+    width: 100%;
+    height: 21.58px;
+    line-height: 100%;
 }
 
 header .logo img {
     width: 163px;
     height: 21.58px;
-    margin-top: 29px;
+    line-height: 100%;
 }
 
 header .header-right {
+    height: 100%;
     position: relative;
     float: right;
     margin-right: 37px;
@@ -54,7 +65,7 @@ header .header-enroll {
     align-items: center;
     cursor: pointer;
     overflow: auto;
-    line-height: 80px;
+    line-height: 100%;
     letter-spacing: 1px;
 }
 
@@ -89,7 +100,7 @@ header .header-enroll {
     height: 100%;
     display: flex;
     text-align: center;
-    line-height: 80px;
+    line-height: 100%;
     letter-spacing: 1px;
     align-items: center;
     cursor: pointer;
@@ -119,9 +130,9 @@ header .header-enroll {
 
 .header-message {
     float: left;
-    height: 80px;
+    height: 100%;
     display: flex;
-    line-height: 80px;
+    line-height: 100%;
     align-items: center;
     cursor: pointer;
     margin-left: 50px;
@@ -142,9 +153,9 @@ header .header-enroll {
 
 .header-search {
     float: left;
-    height: 80px;
+    height: 100%;
     display: flex;
-    line-height: 80px;
+    line-height: 100%;
     align-items: center;
     cursor: pointer;
     margin-left: 50px;
@@ -165,9 +176,9 @@ header .header-enroll {
 
 .header-help {
     float: left;
-    height: 80px;
+    height: 100%;
     display: flex;
-    line-height: 80px;
+    line-height: 100%;
     align-items: center;
     cursor: pointer;
     margin-left: 50px;
@@ -202,13 +213,14 @@ nav {
     height: 50px;
     background-color: #464646;
     position: fixed;
+    line-height: 35px;
     top: 80px;
     z-index: 100;
 }
 
 .headerNav {
     width: 670px;
-    height: 50px;
+    height: 100%;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -219,7 +231,6 @@ nav {
     height: 100%;
     text-align: center;
     font-size: 18px;
-    /* font-family: ; */
 }
 
 .headerNav li a {
@@ -246,11 +257,27 @@ nav {
 }
 
 
+/* 悬浮聊天 */
+.chat {
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    background-color: #000;
+    z-index: 1000;
+}
+
+.chat a {
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+}
 
 /* 轮播图 */
 .slider {
     position: relative;
-    top: 160px;
+    top: 0px;
     width: 100%;
     height: 630px;
     overflow: hidden;
@@ -341,8 +368,8 @@ nav {
 /* 主体 */
 .content {
     width: 100%;
-    height: 2000px;
-    margin-top: 190px;
+    height: 4187px;
+    margin-top: 160px;
 }
 
 /* 热卖单品 */
@@ -368,7 +395,8 @@ nav {
     width: 97%;
 }
 
-h1 {
+.hot h1,
+.new h1 {
     position: absolute;
     top: -15px;
     left: 380px;
@@ -474,15 +502,15 @@ h1 {
 
 .hot-pro-list p {
     color: #333;
-    margin-bottom: 45px;
+    margin-bottom: 38px;
 }
 
-.hot-pro-list:nth-child(2) b {
+.hot .hot-pro-list .del {
     display: block;
     text-decoration: line-through;
 }
 
-.hot-pro-list:nth-child(2) span {
+.hot .hot-pro-list:nth-child(2) span {
     color: red;
 }
 
@@ -503,7 +531,8 @@ h1 {
     text-align: center;
     line-height: 48px;
 }
-.viewAll-button a::after{
+
+.viewAll-button a::after {
     content: "";
     width: 20px;
     height: 30px;
@@ -512,4 +541,431 @@ h1 {
     background-image: url(../images/sprites_header_footer.png);
     background-position: -9px -163px;
     margin-left: 15px;
+}
+
+/* 新品推荐 */
+.new {
+    width: 100%;
+    height: 1373px;
+    margin-top: 50px;
+}
+
+.new .product-lists ul:first-child {
+    margin: 0;
+}
+
+.new .product-lists ul:last-child {
+    border-bottom: 0;
+}
+
+/* 街头先型 */
+.street {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.street-title {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #464646;
+    color: #fff;
+}
+
+.street-title img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.street-title h2 {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 0 0 50px;
+}
+
+.street-content {
+    width: 100%;
+    height: 480px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    margin-bottom: 42px;
+}
+
+.street-item {
+    float: left;
+    width: 488px;
+    height: 476px;
+}
+
+.street-item:first-child {
+    margin-right: 24px;
+}
+
+.street-item .item-product {
+    position: relative;
+    display: inline-block;
+    width: 490px;
+    height: 368px;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+}
+
+/* 遮罩层 */
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/mask.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.item-describe {
+    color: #000;
+    font-size: 22px;
+}
+
+.item-describe:hover {
+    text-decoration: underline;
+    color: #999;
+}
+
+.item-describe h2 {
+    margin: 17px 0 17px 0;
+}
+
+.viewMore {
+    width: 200px;
+    height: 48px;
+    background-color: #000;
+    text-align: center;
+}
+
+.viewMore a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 48px;
+    padding: 0 3px 0 7px;
+}
+
+.viewMore a::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -9px -163px;
+    vertical-align: middle;
+    margin-left: 13px;
+}
+
+.viewMore:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.viewMore:hover a {
+    color: #000;
+}
+
+.viewMore:hover a::after {
+    content: "";
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -39px -163px;
+}
+
+.choiceness {
+    width: 100%;
+    height: 394px;
+}
+
+.choiceness-content {
+    width: 100%;
+    height: 334px;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.choiceness-content ul {
+    width: 100%;
+    height: 334px;
+}
+
+.choiceness-item {
+    float: left;
+    width: 320px;
+    height: 334px;
+    margin-right: 20px;
+}
+
+.choiceness-item:last-child {
+    margin-right: 0;
+}
+
+.choiceness-item .choice-img {
+    position: relative;
+    display: inline-block;
+    width: 322px;
+    height: 242px;
+    border: 1px solid #b7b7b7;
+}
+
+.choice-img img {
+    width: 322px;
+    height: 242px;
+}
+
+.choiceness-describe {
+    color: #000;
+    font-size: 22px;
+    display: block;
+    margin: 13px 0 13px 0;
+    font-weight: bold;
+}
+
+.choiceness-viewmore {
+    margin-top: 6px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.choiceness-viewmore::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-image: url(../images/arrow1.png);
+    background-position: -20px -1px;
+    vertical-align: middle;
+    margin-left: 13px;
+}
+
+.choiceness-viewmore:hover {
+    color: #999;
+    text-decoration: underline;
+}
+
+.choiceness-viewmore:hover::after {
+    background-image: url(../images/arrow1.png);
+    background-position: 0px 0px;
+}
+
+/* 关注CONVERSE */
+.attention {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    margin-top: 80px;
+    text-align: center;
+    color: #fff;
+    background-color: #464646;
+}
+
+.attention h1 {
+    display: inline-block;
+    font-size: 30px;
+    margin: 78px auto 35px;
+    font-weight: normal;
+}
+
+.attention p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.social-software {
+    width: 210px;
+    height: 155px;
+    margin: 37px auto 0;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.social-software a:first-child {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-image: url(../images/share.png);
+    background-position: 75px 0;
+    margin-right: 15px;
+}
+
+.social-software a:first-child {
+    float: left;
+}
+
+.social-software a:first-child:hover {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-image: url(../images/share.png);
+    background-position: 0 0;
+}
+
+.social-software a:nth-child(2) {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-image: url(../images/share.png);
+    background-position: 75px 300px;
+}
+
+.social-software a:nth-child(2):hover {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-image: url(../images/share.png);
+    background-position: 0 300px;
+}
+
+/* 底部导航 */
+.bottom-nav {
+    position: relative;
+    width: 1000px;
+    height: 610px;
+    margin: 75px auto 0;
+    text-align: center;
+}
+
+.bottom-nav-container {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.line {
+    position: relative;
+    width: 1000px;
+    height: 30px;
+
+    margin: 20px auto;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 1px;
+    top: 15px;
+    left: 1.5%;
+    background-color: #b7b7b7;
+
+}
+
+.bottom-nav ul {
+    float: left;
+    width: 240px;
+    height: 280px;
+    text-align: center;
+
+}
+
+.bottom-nav li {
+    width: 100%;
+    height: 20px;
+
+}
+
+.bottom-nav li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.bottom-nav-tit {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blank {
+    margin-bottom: 20px;
+}
+
+.bottom-nav-top {
+    width: 100%;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bottom-nav-bottom {
+    width: 720px;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* 底部 */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    background-color: #000;
+}
+
+.footer-container {
+    height: 175px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer ul {
+    width: 1000px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 18px;
+    box-sizing: border-box;
+}
+
+.footer ul li {
+    float: left;
+    margin: 0 10px;
+    line-height: 30px;
+}
+
+.footer ul li>a {
+    color: #fff;
+}
+
+.footer-logo {
+    display: block;
+    width: 64.5px;
+    height: 43px;
+    margin: 10px auto;
+}
+
+.footer-word {
+    width: 1000px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-word img {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.phone-numb {
+    width: 1000px;
+    text-align: center;
+}
+
+.phone-numb img {
+    width: 60px;
+    height: 34px;
 }

@@ -1,8 +1,55 @@
+// 页面滚动 顶部高度变换
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 200) {
+        $('header').css({
+                "height": "50px",
+                "line-height": "50px"
+            },
+            $('nav').css({
+                "top": "50px",
+                "height": "30px",
+                "line-height": "30px"
+
+            }),
+            $('.headerNav li').css({
+                "font-size": "14px"
+            }),
+            $('.headerNav li i').css({
+                "margin-left": "15px"
+            }),
+            $('.headerNav li:nth-child(4) i').css({
+                "margin-left": "30px"
+            }) ,
+            $('.headerNav li:last-child i').css({
+                "margin-left": "42px"
+            })
+        )
+    } else {
+        $('header').css({
+                "height": "80px",
+                "line-height": "80px"
+            },
+            $('nav').css({
+                "top": "80px",
+                "height": "50px",
+                "line-height": "35px"
+            }),
+            $('.headerNav li').css({
+                "font-size": "18px"
+            }),
+            $('.headerNav li i').css({
+                "margin-left": "-6px"
+            })
+        )
+    }
+})
+
+// 
+
 // 轮播图
 var $num = 0
-// 2.3 默认第一个是红色的背景
 $('.slider ol li').eq(0).addClass('current')
-//   功能3： 鼠标经过哪个小圆点上面， 这个小圆点的背景色就是红色(current类名已经提供)， 同时大图也在跟着切换
+//   功能3： 鼠标经过哪个小圆点上面， 这个小圆点的背景色就是current类名已 同时大图也在跟着切换
 $('.slider ol>li').on('mouseenter', function () {
     //获取当前索引
     var $index = $(this).index();
@@ -13,7 +60,7 @@ $('.slider ol>li').on('mouseenter', function () {
     $('.slider>ul li').eq($index).stop().fadeIn().siblings().stop().fadeOut()
 })
 
-//   功能4： 点击右箭头， 图片进行下一张的切换， 当切换到最后一张的时候， 接着从第一张开始， 下面的小圆点也在跟着在切换， 对应的背景色变红
+//点击右箭头， 图片进行下一张的切换， 当切换到最后一张的时候， 接着从第一张开始， 下面的小圆点也在跟着在切换， 对应的背景色变红
 $('.arrow-right').on('click', function () {
     //自增
     $num++;
@@ -26,7 +73,7 @@ $('.arrow-right').on('click', function () {
     $('.slider ol li').eq($num).addClass("current").siblings().removeClass('current')
 })
 
-//   功能5： 点击左箭头， 图片进行上一张的切换， 当切换到第一张的时候， 接着从最后一张继续倒着切换， 下面的小圆点也在跟着切换， 对应的背景色变红
+//点击左箭头， 图片进行上一张的切换， 当切换到第一张的时候， 接着从最后一张继续倒着切换， 下面的小圆点也在跟着切换， 对应的背景色变红
 $('.arrow-left').on('click', function () {
     //自减
     $num--;
@@ -35,15 +82,15 @@ $('.arrow-left').on('click', function () {
         $num = $('.slider>ul li').length - 1
     }
     $('.slider>ul li').eq($num).stop().fadeIn().siblings().stop().fadeOut()
-    //5.3 下面的小圆点也在跟着切换加类名
+    //下面的小圆点也在跟着切换加类名
     $('.slider ol li').eq($num).addClass("current").siblings().removeClass('current')
 })
-//   功能6： 自动轮播的效果
+//自动轮播的效果
 var timer = setInterval(function () {
     $('.arrow-right').click()
 }, 5000)
-// -功能2： 鼠标移动到大盒子上面， 左右的箭头就会显示出来， 鼠标离开就会隐藏
-//   功能7： 当鼠标移动到大盒子上面的时候， 停止自动轮播， 鼠标离开， 自动轮播继续
+// 标移动到大盒子上面， 左右的箭头就会显示出来， 鼠标离开就会隐藏
+//当鼠标移动到大盒子上面的时候， 停止自动轮播， 鼠标离开， 自动轮播继续
 $('.slider')
     .on('mouseenter', function () {
         // 移除定时器
@@ -58,4 +105,3 @@ $('.slider')
         // 隐藏
         $('.arrow').hide();
     })
-    
