@@ -17,7 +17,7 @@ header {
     width: 100%;
     height: 80px;
     background-color: #000;
-    z-index: 666;
+    z-index: 1000;
     line-height: 80px;
 }
 
@@ -215,7 +215,7 @@ nav {
     position: fixed;
     line-height: 35px;
     top: 80px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .headerNav {
@@ -254,6 +254,54 @@ nav {
     margin-left: -6px;
     height: 0;
     bottom: 6px;
+}
+
+/* 导航对应下拉内容 */
+.nav-content {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    display:none;
+    width: 100%;
+    height: 262px;
+    background-color:#fff;
+    z-index: 999;
+
+}
+.nav-content ul{
+    position: relative;
+    width: 100%;
+    height:130px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 260px;
+}
+.nav-content li{
+    float: left;
+    width: 130px;
+    height: 100%;
+}
+.nav-content li a{
+    color: #000;
+}
+.nav-content li a img{
+    width: 110px;
+    
+}
+.nav-content li a span{
+    display: block;
+    font-size: 14px;
+}
+.nav-line{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 135px;
+    left: 1.5%;
+    background-color: #b7b7b7;
+    z-index: 9;
 }
 
 
@@ -309,9 +357,10 @@ nav {
 .arrow-left,
 .arrow-right {
     font-family: "SimSun", "宋体";
-    width: 30px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 100px;
+    background-color: #000;
+    background-color: #000;
     position: absolute;
     top: 50%;
     margin-top: -30px;
@@ -323,9 +372,15 @@ nav {
     font-size: 30px;
 }
 
-.arrow-left:hover,
-.arrow-right:hover {
-    background-color: rgba(0, 0, 0, .5);
+.arrow-left a {
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 40px;
+    background-image: url(../images/homeslide_arrow.png);
+    background-position: 0 44px;
+    top: 30%;
+    left: 15%;
 }
 
 .arrow-left {
@@ -334,6 +389,17 @@ nav {
 
 .arrow-right {
     right: 0;
+}
+
+.arrow-right a {
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 40px;
+    background-image: url(../images/homeslide_arrow.png);
+    background-position: 0 0;
+    top: 30%;
+    left: 20%;
 }
 
 .slider ol {
@@ -414,6 +480,10 @@ nav {
 /* 选项 */
 .hot-items {
     float: left;
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
 }
 
 .hot-item {
@@ -435,9 +505,10 @@ nav {
 .hot-menu-arrow {
     position: relative;
     width: 97%;
-    height: 20px;
+    height: 40px;
     margin-top: 20px;
     padding: 0 1.5%;
+    overflow: hidden;
 }
 
 .hot-menu-arrow::before {
@@ -445,7 +516,7 @@ nav {
     position: absolute;
     width: 97%;
     height: 1px;
-    top: 254px;
+    top: 18px;
     left: 1.5%;
     background-color: #b7b7b7;
 }
@@ -455,19 +526,27 @@ nav {
     width: 39px;
     height: 21px;
     background-image: url(../images/active.png);
-    top: 254px;
+    top: 18px;
     left: 100px;
 }
 
 .product-lists {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 670px;
+    display: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.active {
+    display: block;
+    opacity: 1;
 }
 
 .product-lists ul {
     width: 100%;
-    height: 100%;
+    height: 300px;
     padding-bottom: 19px;
     border-bottom: 1px dotted #b7b7b7;
     margin: 20px auto 0;
@@ -475,18 +554,22 @@ nav {
     overflow: hidden;
 }
 
+.product-lists ul:last-child {
+    border-bottom: 0;
+}
+
 .hot-pro-list {
     position: relative;
     float: left;
     width: 25%;
     height: 300px;
-    font-size: 14px;
+    font-size: 12px;
     box-sizing: border-box;
 }
 
 .hot-pro-list a {
     display: inline-block;
-    width: 165px;
+    width: 100%;
     height: 300px;
     margin: 0 auto;
     padding-top: 10px;
@@ -502,7 +585,7 @@ nav {
 
 .hot-pro-list p {
     color: #333;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
 
 .hot .hot-pro-list .del {
@@ -510,8 +593,12 @@ nav {
     text-decoration: line-through;
 }
 
-.hot .hot-pro-list:nth-child(2) span {
+.hot .hot-pro-list .now {
     color: red;
+}
+
+.hot-pro-list:hover {
+    border: 1px solid #b7b7b7;
 }
 
 .viewAll-button {
@@ -520,7 +607,8 @@ nav {
     margin: 0 auto;
     text-align: center;
     background-color: #000;
-    margin-top: 50px;
+    margin-top: 12px;
+    display: none;
 }
 
 .viewAll-button a {
@@ -541,28 +629,100 @@ nav {
     background-image: url(../images/sprites_header_footer.png);
     background-position: -9px -163px;
     margin-left: 15px;
+    box-sizing: border-box;
+}
+
+.viewAll-btnActive {
+    display: block;
+}
+
+.viewAll-button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.viewAll-button a:hover {
+
+    color: #000;
+
+}
+
+.viewAll-button a:hover::after {
+    -webkit-transition-duration: .3s;
+    background-position: -42px -163px;
 }
 
 /* 新品推荐 */
 .new {
     width: 100%;
     height: 1373px;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
-.new .product-lists ul:first-child {
+.new-product-lists ul:first-child {
     margin: 0;
 }
 
-.new .product-lists ul:last-child {
+.new-product-lists ul:last-child {
     border-bottom: 0;
 }
+
+.new .new-product-lists {
+    position: relative;
+    width: 100%;
+    height: 1323px;
+    overflow: hidden;
+}
+
+.new-product-lists ul {
+    float: left;
+    width: 100%;
+    height: 300px;
+    margin: 20px auto 0;
+    padding-bottom: 19px;
+    border-bottom: 1px dotted #b7b7b7;
+}
+
+.new-pro-list {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 300px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.new-pro-list a {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.new-pro-list img {
+    width: 165px;
+    height: 165px;
+    margin-bottom: 12px;
+}
+
+.new-pro-list p {
+    color: #333;
+    margin-bottom: 35px;
+}
+
+.new-pro-list:hover {
+    border: 1px solid #b7b7b7;
+}
+
 
 /* 街头先型 */
 .street {
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 88px;
 }
 
 .street-title {
@@ -611,7 +771,8 @@ nav {
     border: 1px solid #b7b7b7;
     box-sizing: border-box;
 }
-.street-item:hover .mask{
+
+.street-item:hover .mask {
     display: block;
 }
 
@@ -643,7 +804,7 @@ nav {
 
 .viewMore {
     width: 200px;
-    height: 48px;
+    height: 47px;
     background-color: #000;
     text-align: center;
 }
@@ -651,7 +812,7 @@ nav {
 .viewMore a {
     color: #fff;
     font-size: 16px;
-    line-height: 48px;
+    line-height: 47px;
     padding: 0 3px 0 7px;
 }
 
@@ -704,7 +865,8 @@ nav {
     height: 334px;
     margin-right: 20px;
 }
-.choiceness-item:hover .mask{
+
+.choiceness-item:hover .mask {
     display: block;
 }
 

@@ -19,7 +19,7 @@ $(window).scroll(function () {
             }),
             $('.headerNav li:nth-child(4) i').css({
                 "margin-left": "30px"
-            }) ,
+            }),
             $('.headerNav li:last-child i').css({
                 "margin-left": "42px"
             })
@@ -44,7 +44,14 @@ $(window).scroll(function () {
     }
 })
 
-// 
+// 悬浮微信
+window.onscroll = function () {
+    var scrollTop = document.documentElement.scrollTop;
+    var chatTop = 200 + scrollTop
+    $('.chat').stop().animate({
+        top: chatTop
+    }, 500)
+}
 
 // 轮播图
 var $num = 0
@@ -105,3 +112,42 @@ $('.slider')
         // 隐藏
         $('.arrow').hide();
     })
+
+// 最新单品 tab切换
+// 给选项添加鼠标移入事件
+$('.hot-item').on('mouseenter', function () {
+    // 当移入哪个选项 哪个选项对应的产品列表出现
+    $('.product-lists').removeClass('active')
+    $('.viewAll-button').removeClass('viewAll-btnActive')
+    let index = $(this).index();
+    if (index == 0) {
+        $('.hot-menu').animate({
+                left: 100
+            }, 500),
+            $('.product-lists').eq(index).addClass('active')
+        $('.viewAll-button').eq(index).addClass('viewAll-btnActive')
+    } else if (index == 1) {
+        $('.hot-menu').animate({
+                left: 340
+            }, 500),
+            $('.product-lists').eq(index).addClass('active')
+        $('.viewAll-button').eq(index).addClass('viewAll-btnActive')
+    } else if (index == 2) {
+        $('.hot-menu').animate({
+                left: 580
+            }, 500),
+            $('.product-lists').eq(index).addClass('active')
+        $('.viewAll-button').eq(index).addClass('viewAll-btnActive')
+    } else if (index == 3) {
+        $('.hot-menu').animate({
+            left: 820
+        }, 500), $('.product-lists').eq(index).addClass('active')
+        $('.viewAll-button').eq(index).addClass('viewAll-btnActive')
+    }
+})
+// 头部导航  
+$('.headerNav li').on('mouseover', function () {
+    $('.nav-content').hide();
+    let i = $(this).index();
+    $('.nav-content').eq(i).show()
+})
