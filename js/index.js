@@ -15,14 +15,60 @@ $(window).scroll(function () {
                 "font-size": "14px"
             }),
             $('.headerNav li i').css({
-                "margin-left": "15px"
+                "margin-left": "15px",
+                "bottom": "5px"
             }),
             $('.headerNav li:nth-child(4) i').css({
-                "margin-left": "30px"
+                "margin-left": "30px",
+                "bottom": "5px"
             }),
             $('.headerNav li:last-child i').css({
-                "margin-left": "42px"
+                "margin-left": "42px",
+                "bottom": "5px"
+            }),
+            $('.nav-content').css({
+                "top": "30px"
+            }),
+            $('.headerNav li').on('mouseover', function () {
+                $('.nav-content').hide()
+                let i = $(this).index()
+                if (i < 1 || i == 1) {
+                    $('nav').css({
+                            "height": "272px"
+                        }),
+                        $('.nav-content').eq(i).show(),
+                        $(".body-mask").css({
+                            "display": "block"
+                        })
+                } else if (i == 2) {
+                    $('nav').css({
+                            "height": "140px"
+                        }),
+                        $('.nav-content').eq(i).show(),
+                        $(".body-mask").css({
+                            "display": "block"
+                        })
+                } else {
+                    $('nav').css({
+                            "height": "30px"
+                        }),
+                        $('.nav-content').hide(),
+                        $(".body-mask").css({
+                            "display": "none"
+                        })
+                }
+
+            }),
+            $('nav').on("mouseleave", function () {
+                $('.nav-content').hide(),
+                    $('nav').css({
+                        "height": "30px"
+                    }),
+                    $(".body-mask").css({
+                        "display": "none"
+                    })
             })
+
         )
     } else {
         $('header').css({
@@ -38,7 +84,8 @@ $(window).scroll(function () {
                 "font-size": "18px"
             }),
             $('.headerNav li i').css({
-                "margin-left": "-6px"
+                "margin-left": "-6px",
+                "bottom": "-15px"
             })
         )
     }
@@ -145,9 +192,32 @@ $('.hot-item').on('mouseenter', function () {
         $('.viewAll-button').eq(index).addClass('viewAll-btnActive')
     }
 })
-// 头部导航  
+// // 头部导航  
 $('.headerNav li').on('mouseover', function () {
-    $('.nav-content').hide();
-    let i = $(this).index();
-    $('.nav-content').eq(i).show()
+    $('.nav-content').hide()
+    let i = $(this).index()
+    if (i < 1 || i == 1) {
+        $('nav').css({
+                "height": "312px"
+            }),
+            $('.nav-content').eq(i).show()
+        $()
+    } else if (i == 2) {
+        $('nav').css({
+                "height": "180px"
+            }),
+            $('.nav-content').eq(i).show()
+    } else {
+        $('nav').css({
+                "height": "50px"
+            }),
+            $('.nav-content').hide()
+    }
+
+})
+$('nav').on("mouseleave", function () {
+    $('.nav-content').hide()
+    $('nav').css({
+        "height": "50px"
+    })
 })
