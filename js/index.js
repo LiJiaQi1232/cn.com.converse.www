@@ -86,6 +86,38 @@ $(window).scroll(function () {
             $('.headerNav li i').css({
                 "margin-left": "-6px",
                 "bottom": "-15px"
+            }), $('.headerNav li').on('mouseover', function () {
+                $('.nav-content').hide()
+                let i = $(this).index()
+                if (i < 1 || i == 1) {
+                    $('nav').css({
+                            "height": "312px"
+                        }),
+                        $('.nav-content').eq(i).show(),
+                    $(".nav-content").css({
+                        "top":50
+                    })
+                } else if (i == 2) {
+                    $('nav').css({
+                            "height": "180px"
+                        }),
+                        $('.nav-content').eq(i).show(),
+                        $(".nav-content").css({
+                            "top":50
+                        })
+                } else {
+                    $('nav').css({
+                            "height": "50px"
+                        }),
+                        $('.nav-content').hide()
+                }
+
+            }),
+             $('nav').on("mouseleave", function () {
+                $('.nav-content').hide()
+                $('nav').css({
+                    "height": "50px"
+                })
             })
         )
     }
@@ -193,31 +225,31 @@ $('.hot-item').on('mouseenter', function () {
     }
 })
 // // 头部导航  
-$('.headerNav li').on('mouseover', function () {
-    $('.nav-content').hide()
-    let i = $(this).index()
-    if (i < 1 || i == 1) {
-        $('nav').css({
-                "height": "312px"
-            }),
-            $('.nav-content').eq(i).show()
-        $()
-    } else if (i == 2) {
-        $('nav').css({
-                "height": "180px"
-            }),
-            $('.nav-content').eq(i).show()
-    } else {
-        $('nav').css({
-                "height": "50px"
-            }),
-            $('.nav-content').hide()
-    }
+// $('.headerNav li').on('mouseover', function () {
+//     $('.nav-content').hide()
+//     let i = $(this).index()
+//     if (i < 1 || i == 1) {
+//         $('nav').css({
+//                 "height": "312px"
+//             }),
+//             $('.nav-content').eq(i).show()
+//         $()
+//     } else if (i == 2) {
+//         $('nav').css({
+//                 "height": "180px"
+//             }),
+//             $('.nav-content').eq(i).show()
+//     } else {
+//         $('nav').css({
+//                 "height": "50px"
+//             }),
+//             $('.nav-content').hide()
+//     }
 
-})
-$('nav').on("mouseleave", function () {
-    $('.nav-content').hide()
-    $('nav').css({
-        "height": "50px"
-    })
-})
+// })
+// $('nav').on("mouseleave", function () {
+//     $('.nav-content').hide()
+//     $('nav').css({
+//         "height": "50px"
+//     })
+// })
