@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/srceen.css">
+    <link rel="stylesheet" href="./lib/reset/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/screen.css">
 </head>
 
 <body>
     <!-- 头部 -->
-    <header>
+    <header class="clearfix">
         <!-- 版心 -->
         <div class="header-continer">
             <!-- 头部左边logo -->
@@ -162,30 +164,28 @@
     <nav>
         <!-- 版心 -->
         <div class="nav">
-            <div class="nav-container">
-                <ul class="headerNav">
-                    <li>
-                        <a href="">男的</a>
-                        <i></i>
-                    </li>
-                    <li>
-                        <a href="">女的</a>
-                        <i></i>
-                    </li>
-                    <li>
-                        <a href="">儿童</a>
-                        <i></i>
-                    </li>
-                    <li>
-                        <a href="">店铺分布</a>
-                        <i></i>
-                    </li>
-                    <li>
-                        <a href="">帆布鞋品类日</a>
-                        <i></i>
-                    </li>
-                </ul>
-            </div>
+            <ul class="headerNav">
+                <li>
+                    <a href="">男的</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">女的</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">儿童</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">店铺分布</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="">帆布鞋品类日</a>
+                    <i></i>
+                </li>
+            </ul>
         </div>
         <!-- 导航对应下拉内容 -->
         <!-- 男的 -->
@@ -391,6 +391,48 @@
             <img src="./images/livechat.png" alt="">
         </a>
     </div>
+    <!-- 主体 -->
+    <div class="content">
+          <!-- 标题 -->
+          <div class="ornaments-title">
+            <h1>戴的/135件商品</h1>
+        </div>
+        <!-- 主体 -->
+        <!-- 版心 -->
+        <div class="container">
+            <!--  主体左边-->
+          <div class="ornaments-left">
+              <!-- 已经选择了的选项 -->
+              <div class="selected">
+                  <!-- 筛选  标题 -->
+                  <div class="selected-tit">
+                    <span>筛选</span>
+                  </div>
+                  <!-- 选择列表 -->
+                  <ul class="selected-lists">
+                      <!-- <li class="selected-list">
+                          <h4>系列</h4>
+                          <div class="list-cont"></div>
+                      </li> -->
+                  </ul>
+                  <!-- 全部重选 -->
+                  <div class="reselect">
+                      <a href="">
+                          <span>>>全部重选</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="option">
+                  
+              </div>
+          </div>
+        </div>
+
+    </div>
+
+
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./js/common.js"></script>
 </body>
 
 </html>
