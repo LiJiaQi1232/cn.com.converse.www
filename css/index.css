@@ -417,7 +417,7 @@ nav {
     font-size: 30px;
 }
 
-.arrow-left a {
+.arrow-left i {
     display: inline-block;
     position: absolute;
     width: 21px;
@@ -436,7 +436,7 @@ nav {
     right: 0;
 }
 
-.arrow-right a {
+.arrow-right i {
     display: inline-block;
     position: absolute;
     width: 21px;
