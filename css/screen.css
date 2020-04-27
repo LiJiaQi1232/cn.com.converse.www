@@ -8,12 +8,14 @@ body {
 
 body {
     position: relative;
+    font-family: "tradegothic", "fzlthjw", "微软雅黑", "Microsoft YaHei", "黑体", "SimHei";
 }
 
 .content {
     margin-top: 130px;
     width: 100%;
-    height: 1000px;
+    /* height: 13870px; */
+    height: auto;
 }
 
 .ornaments-title {
@@ -50,7 +52,7 @@ body {
 
 .container {
     width: 1000px;
-    height: 4780px;
+    height: auto;
     margin: 20px auto 0;
     overflow: hidden;
 }
@@ -59,14 +61,133 @@ body {
     float: left;
     width: 25%;
     height: 497px;
-    background-color: lightcoral;
+    padding-right: 3%;
+    box-sizing: border-box;
+}
+
+.selected {
+    width: 100%;
+    height: auto;
+    margin: 0 0 40px 0;
+    padding: 0 8.5%;
+    padding-bottom: 40px;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+}
+
+.selected-tit {
+    width: 100%;
+    line-height: 48px;
+    height: 48px;
+    border-bottom: 1px solid #b7b7b7;
+}
+
+.selected-tit span {
+    font-size: 18px;
+}
+
+.selected-lists {
+    width: 100%;
+}
+
+.selected-lists li {
+    width: 100%;
+    border-bottom: 1px dotted #b7b7b7;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.selected-lists h4 {
+    line-height: 26px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.list-cont {
+    line-height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.list-cont::before {
+    content: "";
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/cart-sprite1.png);
+    background-repeat: no-repeat;
+    background-position: -4px -182px;
+    border: 2px solid #000;
+    margin: 3px 5px 0 0;
+}
+
+.reselect {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: right;
+    display: none;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+.option {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.minus {
+    height: 25px;
+    width: 100%;
+    padding: 18px 0 5px 0;
+    border-top: 1px solid #b7b7b7;
+    overflow: hidden;
+}
+
+.minus dt {
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    background-image: url(../images/plus.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.minus dd {
+
+    color: #333;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    vertical-align: middle;
+}
+
+.minus dd:hover {
+    color: #b2b2b2;
+    -webkit-transition-duration: .3s;
+    text-decoration: underline;
+}
+
+.minus-list::before {
+    content: "";
+    background-color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 5px 5px 0 2px;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
 }
 
 .ornaments-right {
     float: left;
     width: 75%;
-    height: 4780px;
-    background-color: lightcyan;
+    /* height: 13870px; */
+    height: auto;
 }
 
 .ornaments-right-tit {
@@ -75,18 +196,57 @@ body {
     height: 40px;
     line-height: 40px;
     margin-bottom: 30px;
-    background-color: lightgreen;
+    overflow: hidden;
+}
+
+.ornaments-right-tit span {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 20px;
+    font-size: 14px;
+    overflow: hidden;
 }
 
 .ornaments-right-tit .tit-list {
     display: inline-block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.active {
+    background-color: #000;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.tit-list li {
     float: left;
+    text-align: center;
+    line-height: 25px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.tit-list li a {
+    color: #000;
+    font-size: 14px;
+}
+
+.tit-list .active a {
+    color: #fff;
 }
 
 .product-list {
     float: left;
     width: 100%;
+    /* height: 13800px; */
+    height: 100%;
+    text-align: center;
 }
+
 
 .product-list ul {
     width: 100%;
@@ -95,13 +255,41 @@ body {
 }
 
 .product-list ul>li {
+    position: relative;
     float: left;
     text-align: center;
     width: 33.3333%;
     height: 300px;
+    box-sizing: border-box;
+}
+
+.product:hover {
+    border: 1px solid #b7b7b7;
+    -webkit-transition-duration: .3s;
+}
+
+.product a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
 }
 
 .product img {
+    padding-top: 10px;
     width: 165px;
     height: 165px;
+    margin: 0 auto;
+}
+
+.product a p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    height: 55px;
+    color: #333;
+}
+
+.del {
+    display: block;
+    text-decoration: line-through;
 }
