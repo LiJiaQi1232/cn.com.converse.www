@@ -1,0 +1,76 @@
+/* 底部导航 */
+.bottom-nav {
+    position: relative;
+    width: 1000px;
+    height: 610px;
+    margin: 75px auto 0;
+    text-align: center;
+}
+
+.bottom-nav-container {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.line {
+    position: relative;
+    width: 1000px;
+    height: 30px;
+
+    margin: 20px auto;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 1px;
+    top: 15px;
+    left: 1.5%;
+    background-color: #b7b7b7;
+
+}
+
+.bottom-nav ul {
+    float: left;
+    width: 240px;
+    height: 280px;
+    text-align: center;
+
+}
+
+.bottom-nav li {
+    width: 100%;
+    height: 20px;
+
+}
+
+.bottom-nav li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.bottom-nav-tit {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blank {
+    margin-bottom: 20px;
+}
+
+.bottom-nav-top {
+    width: 100%;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bottom-nav-bottom {
+    width: 720px;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
