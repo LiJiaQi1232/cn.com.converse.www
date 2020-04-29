@@ -1,3 +1,178 @@
+.content {
+    width: 100%;
+    height: auto;
+    margin-top: 210px;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cont-left {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+}
+
+.share {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.share i {
+    position: absolute;
+    background-image: url(../images/detail.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}
+
+.share span {
+    margin-left: 35px;
+}
+
+.collection {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.collection i{
+    position: absolute;
+    background-image: url(../images/detail.png);
+    background-repeat: no-repeat;
+    background-position: 0px -43px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}
+.collection span{
+    margin-left: 40px;
+}
+.comment {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.comment i{
+    position: absolute;
+    background-image: url(../images/stars.png);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.comment span{
+    margin-left: 110px;
+}
+
+
+.cont-center {
+    float: left;
+    width: 515px;
+}
+.center-tit{
+    text-align: center;
+    position: absolute;
+    width: 515px;
+    height: 73.6px;
+}
+.center-tit h1{
+    width: 100%;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: bold;
+    text-align: center;
+}
+.center-tit span{
+    text-align: center;
+    width: 100%;
+    line-height:37px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 7px;
+}
+/* 放大镜 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.one {
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.one span {
+    width: 58px;
+    height: 143px;
+    position: absolute;
+    border: 1px solid #AFAFAF;
+    top: 0;
+    left: 0;
+    display: none
+}
+
+.wai {
+    float: left;
+    margin-top: 62px;
+}
+
+.two {
+    padding: 30px 0 0 50px;
+    box-sizing: border-box;
+}
+
+.two .active {
+    border: 1px solid #b7b7b7;
+}
+
+.two img:hover {
+    border: 1px solid #b7b7b7;
+}
+
+.the {
+    width: 204px;
+    height: 510px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border: 1px solid #969696;
+    display: none;
+}
+
+.the img {
+    position: absolute;
+    display: block;
+}
+
 /* 底部导航 */
 .bottom-nav {
     position: relative;
