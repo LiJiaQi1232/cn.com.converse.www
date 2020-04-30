@@ -118,11 +118,18 @@
 .order i {
     background-position: 5px -49px;
 }
+
 .order:hover i {
-    background-position: 5px -49px;
+    background-position: -65px -49px;
 }
+
+
 .size i {
     background-position: 5px -95px;
+}
+
+.size:hover i {
+    background-position: -66px -95px;
 }
 
 .pay i {
@@ -130,12 +137,24 @@
     background-position: 0 -143px;
 }
 
+.pay:hover i {
+    background-position: -64px -149px;
+}
+
 .return i {
     background-position: 3px -196px;
 }
 
+.return:hover i {
+    background-position: -67px -196px;
+}
+
 .exchange i {
     background-position: 0 -243px;
+}
+
+.exchange:hover i {
+    background-position: -70px -243px;
 }
 
 .distribution i {
@@ -143,9 +162,17 @@
     background-position: 0 -300px;
 }
 
+.distribution:hover i {
+    background-position: -60px -300px;
+}
+
 .call-me i {
     width: 58px;
     background-position: 0 -347px;
+}
+
+.call-me:hover i {
+    background-position: -64px -347px;
 }
 
 
