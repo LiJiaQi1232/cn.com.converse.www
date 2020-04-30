@@ -1,0 +1,282 @@
+/* 主体 */
+.content {
+    width: 100%;
+    height: 530px;
+    margin-top: 185px;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.help-title {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.help-line {
+    position: absolute;
+    background-color: #b7b7b7;
+    height: 1px;
+    left: 1.5%;
+    width: 97%;
+}
+
+.content h1 {
+    position: absolute;
+    top: -15px;
+    left: 380px;
+    width: 290px;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+    padding: 0 40px;
+    font-size: 30px;
+    background-color: #fff;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.h-g-text {
+    width: 77%;
+    margin: 0 auto;
+    padding: 15px 0 40px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.help-box {
+    width: 100%;
+    margin-top: 40px;
+    height: 260px;
+}
+
+.help-menu {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.help-menu li {
+    float: left;
+    display: inline;
+    width: 233px;
+    height: 108px;
+    border: 1px solid #b7b7b7;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.help-menu li:hover {
+    background-color: #b7b7b7;
+    -webkit-transition-duration: .3s
+}
+
+.container .help-menu li:nth-child(4) {
+    margin-right: 0;
+}
+
+.container .help-menu li:last-child {
+    margin-right: 0;
+}
+
+.help-menu a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.help-menu li:hover a {
+    color: #fff;
+}
+
+.help-menu i {
+    background-image: url(../images/help-guide-sprites.png);
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 10px auto 13px;
+}
+
+.my i {
+    background-position: 3px 0;
+}
+
+.my:hover i {
+    background-position: -67px 0;
+}
+
+.order i {
+    background-position: 5px -49px;
+}
+.order:hover i {
+    background-position: 5px -49px;
+}
+.size i {
+    background-position: 5px -95px;
+}
+
+.pay i {
+    width: 56px;
+    background-position: 0 -143px;
+}
+
+.return i {
+    background-position: 3px -196px;
+}
+
+.exchange i {
+    background-position: 0 -243px;
+}
+
+.distribution i {
+    width: 60px;
+    background-position: 0 -300px;
+}
+
+.call-me i {
+    width: 58px;
+    background-position: 0 -347px;
+}
+
+
+
+
+
+
+.viewAll-button {
+    width: 420px;
+    height: 48px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000;
+    margin-top: 55px;
+    display: none;
+}
+
+.viewAll-button a {
+    height: 48px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.viewAll-button a::after {
+    content: "";
+    width: 20px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/sprites_header_footer.png);
+    background-position: -9px -163px;
+    margin-left: 15px;
+    box-sizing: border-box;
+}
+
+.viewAll-btnActive {
+    display: block;
+}
+
+.viewAll-button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.viewAll-button a:hover {
+
+    color: #000;
+
+}
+
+.viewAll-button a:hover::after {
+    -webkit-transition-duration: .3s;
+    background-position: -42px -163px;
+}
+
+/* 底部导航 */
+.bottom-nav {
+    position: relative;
+    width: 1000px;
+    height: 610px;
+    margin: 75px auto 0;
+    text-align: center;
+}
+
+.bottom-nav-container {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.line {
+    position: relative;
+    width: 1000px;
+    height: 30px;
+
+    margin: 20px auto;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 1px;
+    top: 15px;
+    left: 1.5%;
+    background-color: #b7b7b7;
+
+}
+
+.bottom-nav ul {
+    float: left;
+    width: 240px;
+    height: 280px;
+    text-align: center;
+
+}
+
+.bottom-nav li {
+    width: 100%;
+    height: 20px;
+
+}
+
+.bottom-nav li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.bottom-nav-tit {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blank {
+    margin-bottom: 20px;
+}
+
+.bottom-nav-top {
+    width: 100%;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bottom-nav-bottom {
+    width: 720px;
+    height: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
