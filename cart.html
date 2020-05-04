@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./lib/reset/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
 
 <body>
@@ -399,7 +400,122 @@
             </a>
         </div>
 
-        <!-- 底部 -->
+        <!-- 提示 -->
+        <div class="public-top">
+            <div class="car_notice">
+                <a href="javascript:;">
+                    <p> 尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。
+                    </p>
+                </a>
+                <i class="close-btn"></i>
+            </div>
+            <div class="con-progress">
+                <ul class="list-unstyle float-clearfix">
+                    <li class="con-progress-step-1"><a href="javascript:void(0)">我的购物车</a><i></i></li>
+                    <li class="con-progress-step-2"><a href="javascript:void(0)">填写订单信息</a><i></i></li>
+                    <li class="con-progress-step-3"><a href="javascript:void(0)">成功提交订单</a><i></i></li>
+                </ul>
+                <div class="list-line"></div>
+            </div>
+        </div>
+
+
+
+        <!-- 购物车内容 -->
+        <div class="car_content">
+            <div class="container">
+                <h1>您的购物车：<span id="total">0</span>件商品</h1>
+                <div class="ctrl">
+                    <div class="checkAll check">全选</div>
+                    <span>您已选中<span class="xuanzhong">0</span>件商品</span>
+                </div>
+
+                <div class="sum">
+
+
+                    <div class="shopcart-list-content">
+                        <div class="shopcart-list ">
+                            <div class="shopcart-info-change">
+                                <div class="check-box check shopcart-item is-active"></div>
+                                <input type="hidden"/>
+                                <div class="removeBtn">删除</div>
+                                <div class="editBtn  editFun">编辑</div>
+                            </div>
+                            <div class="goods-box">
+                                <div class="goods-img">
+                                    <a href="">
+                                        <img src="./upload/cart-product-01.png"></a>
+                                        <i class="icon icon-outOfStock-bg"></i></div>
+                                <div class="goods-detial">
+                                    <h4><a href="">【男的】Hyper Local City ShortSleeve Tee</a></h4>
+                                    <p>型号：10020858102</p>
+                                    <p>颜色：白色</p>
+                                    <p>尺码：165/88A</p>
+                                </div>
+                                <div class="goods-price">
+                                    <p>&yen;438.00</p>
+                                    <div class="shopcart-qty "><label>数量</label>
+                                        <div class="calculate-num events-calculateNum">
+                                            <input  type="hidden" name="skuUpc" />
+                                            <a class="qty-btn-left events-minus reduce  changereduce ">
+                                                <i class="icon icon-left-minus"></i></a>
+                                                <input class="qty-input events-input" type="text" id="skuQty" readonly="readonly" value="2">
+                                                <a class="qty-btn-right events-plus add  changeadd">
+                                                    <i class="icon icon-left-plus"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctrl">
+                        <div class="checkAll check">全选</div>
+                        <span>您已选中<span class="xuanzhong">0</span>件商品</span>
+                    </div>
+                    <div class="sum_left">
+                        <div class="car_help">
+                            <h4>需要帮助吗？</h4>
+                            <div class="help-box">
+                                <a href="javascript:;">如何确保订单安全？</a>
+                                <a href="javascript:;">我可以使用什么付款方式？</a>
+                                <a href="javsascript:;">如何进行退换货？</a>
+                                <a href="javascript:;">更多帮助</a>
+                            </div>
+
+
+
+                        </div>
+                        <div class="continue_shopping">
+                            <a href="./index.html">继续购物</a>
+                        </div>
+                    </div>
+                    <div class="sum_right">
+                        <div class="sum-right-top items">
+                            <div class="yuanjia items">
+                                <div class="tit">商品原价：</div>
+                                <div class="info">¥ 438.00</div>
+                            </div>
+                            <div class="activity items">
+                                <div class="tit">店铺活动：</div>
+                                <div class="info">¥ 0.00</div>
+                            </div>
+                            <div class="price items">
+                                <div class="tit">商品金额</div>
+                                <div class="info">¥ 438.00</div>
+                            </div>
+                            <div class="word">
+                                <p>*不含运费及优惠卷折扣</p>
+                                <p>*以会员身份结算可享受免费配送服务</p>
+                            </div>
+                        </div>
+
+                        <div class="car_pay">
+                            结算
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer">
             <div class="content-mask"></div>
             <div class="footer-container">
@@ -422,10 +538,10 @@
                     <img src="./images/cautionIcon.png" alt="">
                 </div>
             </div>
-            
         </div>
         <script src="./lib/jquery-3.4.1.min.js"></script>
         <script src="./js/common.js"></script>
+        <script src="./js/cart.js"></script>
     </body>
 
 </html>
