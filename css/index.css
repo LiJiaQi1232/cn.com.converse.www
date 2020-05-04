@@ -382,6 +382,7 @@ body {
     height: 300px;
     font-size: 12px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .new-pro-list a {

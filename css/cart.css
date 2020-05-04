@@ -400,6 +400,12 @@
     line-height: 18px;
     padding-bottom: 30px;
 }
+.goods-detial h4 a {
+    display: block;
+    width: 371px;
+    height: 18px;
+
+}
 
 .goods-detial p {
     font-size: 14px;

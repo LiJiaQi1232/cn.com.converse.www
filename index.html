@@ -30,14 +30,14 @@
             <div class="header-right">
                 <!-- 登录注册 -->
                 <div class="header-enroll">
-                    <a href="javascript:;">登录</a>
+                    <a href="javascript:;" id="login" class="login_">登录</a>
                     <span>/</span>
-                    <a href="javascript:;">注册</a>
+                    <a href="javascript:;" id="register" class="register_">注册</a>
                     <div class="iconMy"></div>
                 </div>
                 <!-- 购物车 -->
                 <div class="header-cart">
-                    <a href="">购物车</a>
+                    <a href="./cart.html">购物车</a>
                     <div class="iconCart">0</div>
                 </div>
                 <!-- 信息 -->
@@ -54,11 +54,12 @@
                 </div>
                 <!-- 帮助 -->
                 <div class="header-help">
-                    <a href="">
+                    <a href="./help.html">
                         <div class="iconHelp"></div>
                     </a>
                 </div>
             </div>
+        </div>
             <!-- 当点击登录时 登录窗口 -->
             <div class="login">
                 <div class="container">
@@ -78,19 +79,18 @@
                             <!-- 密码 -->
                             <input type="password" placeholder="账户密码" id="password">
                             <!-- 验证码 -->
-
+                            <div class="verification"></div>
                             <!-- 单选 提示 -->
                             <input type="checkbox" name="" id="ck1" checked>一旦登录，即表明您同意匡威更新的 <a href="javascript:;"
                                 class="agreement">隐私政策和使用规则</a>
                             <!-- 登录按钮 -->
-                            <span>登录</span>
+                            <span class="lgBtn">登录</span>
                             <input type="checkbox" class="remember">记住登录名
                             <a href="javascript:;" class="forget">忘记密码？</a>
                         </form>
                     </div>
                 </div>
             </div>
-
             <!-- 当点击注册按钮 注册窗口 -->
             <div class="register">
                 <div class="register-content">
@@ -303,7 +303,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./screen.html">
                         <img src="./images/nav_acc_women_200402.png" alt="">
                         <span>戴的</span>
                     </a>
@@ -405,7 +405,7 @@
         <div class="slider">
             <ul>
                 <li><a href="#"><img src="./upload/lunbo-07.gif" alt=""></a></li>
-                <li><a href="#"><img src="./upload/lunbo-01.jpg" alt=""></a></li>
+                <li><a href="./ad.html"><img src="./upload/lunbo-01.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./upload/lunbo-02.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./upload/lunbo-03.gif" alt=""></a></li>
                 <li><a href="#"><img src="./upload/lunbo-04.jpg" alt=""></a></li>
@@ -762,7 +762,6 @@
                         <li class="new-pro-list">
                             <a href="">
                                 <img src="./upload/hot-man-shoes-03.png" alt="">
-                               <a href="">
                               <p> 【男的】Converse G4</p>
                                 <b>¥799.00</b>
                             </a>
@@ -1171,6 +1170,7 @@
     <script src="./lib/jquery-3.4.1.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

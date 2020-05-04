@@ -437,7 +437,7 @@
                         <div class="shopcart-list ">
                             <div class="shopcart-info-change">
                                 <div class="check-box check shopcart-item is-active"></div>
-                                <input type="hidden"/>
+                                <input type="hidden" />
                                 <div class="removeBtn">删除</div>
                                 <div class="editBtn  editFun">编辑</div>
                             </div>
@@ -445,7 +445,7 @@
                                 <div class="goods-img">
                                     <a href="">
                                         <img src="./upload/cart-product-01.png"></a>
-                                        <i class="icon icon-outOfStock-bg"></i></div>
+                                    <i class="icon icon-outOfStock-bg"></i></div>
                                 <div class="goods-detial">
                                     <h4><a href="">【男的】Hyper Local City ShortSleeve Tee</a></h4>
                                     <p>型号：10020858102</p>
@@ -453,15 +453,16 @@
                                     <p>尺码：165/88A</p>
                                 </div>
                                 <div class="goods-price">
-                                    <p>&yen;438.00</p>
+                                    <p>&yen; <i>219.00</i> </p>
                                     <div class="shopcart-qty "><label>数量</label>
                                         <div class="calculate-num events-calculateNum">
-                                            <input  type="hidden" name="skuUpc" />
+                                            <input type="hidden" name="skuUpc" />
                                             <a class="qty-btn-left events-minus reduce  changereduce ">
                                                 <i class="icon icon-left-minus"></i></a>
-                                                <input class="qty-input events-input" type="text" id="skuQty" readonly="readonly" value="2">
-                                                <a class="qty-btn-right events-plus add  changeadd">
-                                                    <i class="icon icon-left-plus"></i></a></div>
+                                            <input class="qty-input events-input" type="text" id="skuQty"
+                                                readonly="readonly" value="1">
+                                            <a class="qty-btn-right events-plus add  changeadd">
+                                                <i class="icon icon-left-plus"></i></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -492,7 +493,7 @@
                         <div class="sum-right-top items">
                             <div class="yuanjia items">
                                 <div class="tit">商品原价：</div>
-                                <div class="info">¥ 438.00</div>
+                                <div class="info">¥ 219.00</div>
                             </div>
                             <div class="activity items">
                                 <div class="tit">店铺活动：</div>
@@ -500,7 +501,7 @@
                             </div>
                             <div class="price items">
                                 <div class="tit">商品金额</div>
-                                <div class="info">¥ 438.00</div>
+                                <div class="info">¥ 219.00</div>
                             </div>
                             <div class="word">
                                 <p>*不含运费及优惠卷折扣</p>
@@ -516,6 +517,48 @@
             </div>
         </div>
 
+        <!--  弹窗-->
+        <div class="edit-win">
+            <div class="edit-container">
+                <div class="edit-tit">
+                    <h3>【男女同款】Chuck Taylor All Star</h3>
+                    <p>
+                        价格
+                        <span class="red">¥ 439.00</span>
+                    </p>
+                </div>
+                <div class="edit-img">
+                    <a href="javascript:;">
+                        <img src="./upload/cart-product-01.png" alt="">
+                    </a>
+                </div>
+                <div class="edit-select edit-size">
+                    <div class="select-tit">
+                        请输入你的尺码
+                    </div>
+                    <div class="select-size">
+                        <div class="selectbox">
+                            <div class="selectbox">
+                                <span class="selectindex">165/88A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 删除弹窗 -->
+        <div class="remove-win">
+            <div class="closeBtn"></div>
+            <div class="rem-content">
+                <p class="message">您确定要从购物车中删除该商品吗？</p>
+                <p>
+                    <a href="" class="button confirm-message">确定</a>
+                    <a href="" class="button cancel-message">取消</a>
+                </p>
+            </div>
+        </div>
         <div class="footer">
             <div class="content-mask"></div>
             <div class="footer-container">
